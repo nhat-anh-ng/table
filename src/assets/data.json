@@ -1,0 +1,8 @@
+{
+    "students": [
+        { "id": 1, "name": "json"}
+    ],
+    "comments": [
+        { "id": 1, "body": "jn"}
+    ]
+}
