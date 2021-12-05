@@ -18,7 +18,7 @@ export class StudentComponent implements OnInit {
   studentForm!: NgForm;
   studentData!: Student;
   dataSource = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'name'];
+  displayedColumns: string[] = ['id', 'name', 'actions'];
   isEditMode = false;
   constructor(private httpDataService:DataService) {
     this.studentData = {} as Student
@@ -34,9 +34,21 @@ export class StudentComponent implements OnInit {
     });
   }
 
+  addItem(){
+    this.httpDataService.createItem(this.studentData).subscribe(() => {
+      this.getAllStudents();
+    })
+  }
+
   editItem(element: any) {
     this.studentData = _.cloneDeep(element);
     this.isEditMode = true;
+  }
+
+  updateItem(element: any){
+    this.httpDataService.updateItem(element.id, this.studentData).subscribe(() => {
+      this.getAllStudents();
+    })
   }
 
   cancelEdit() {
@@ -53,6 +65,5 @@ export class StudentComponent implements OnInit {
       console.log(this.dataSource.data);
     })
   }
-
 
 }

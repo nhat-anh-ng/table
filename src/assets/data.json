@@ -1,8 +1,78 @@
 {
-    "students": [
-        { "id": 1, "name": "json"}
-    ],
-    "comments": [
-        { "id": 1, "body": "jn"}
-    ]
+  "students": [
+    {
+      "id": 5,
+      "name": "hello2u"
+    },
+    {
+      "id": 6,
+      "name": "json"
+    },
+    {
+      "id": 7,
+      "name": "json"
+    },
+    {
+      "id": 8,
+      "name": "json"
+    },
+    {
+      "id": 9,
+      "name": "json"
+    },
+    {
+      "id": 10,
+      "name": "json"
+    },
+    {
+      "id": 11,
+      "name": "json"
+    },
+    {
+      "id": 12,
+      "name": "json"
+    },
+    {
+      "name": "hello",
+      "id": 13
+    },
+    {
+      "name": "hello2u",
+      "id": 14
+    },
+    {
+      "id": 15
+    }
+  ],
+  "semester": [
+    {
+      "Id": "20193",
+      "Semester": "Fall",
+      "Year": "2018",
+      "course": [
+        {
+          "CourseNumber": "100",
+          "CourseTitle": "CEU: Contemporary Collective Bargaining",
+          "CurriculumID": "00004285"
+        },
+        {
+          "CourseNumber": "101",
+          "CourseTitle": "Design Foundations",
+          "CurriculumID": "00000897"
+        }
+      ]
+    },
+    {
+      "Id": "20195",
+      "Semester": "Spring",
+      "Year": "2019",
+      "course": [
+        {
+          "CourseNumber": "230",
+          "CourseTitle": "American Indians of Minnesota",
+          "CurriculumID": "00007541"
+        }
+      ]
+    }
+  ]
 }

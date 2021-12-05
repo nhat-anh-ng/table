@@ -1,4 +1,4 @@
-<p>
+<!-- <p>
     <mat-toolbar color="primary">
         <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
            hi
@@ -13,23 +13,23 @@
         </button>
     </mat-toolbar>
 </p>
-<br>
+<br> -->
 <form  #studentForm="ngForm">
     <mat-form-field>
         <input matInput placeholder="Name" name="name" required [(ngModel)]="studentData.name">
     </mat-form-field>
 
     <ng-container *ngIf="isEditMode; else elseTemplate">
-        <button mat-raised-button color="primary" >Update</button>&nbsp;
+        <button mat-raised-button color="primary" (click)="updateItem(studentData)">Update</button>&nbsp;
         <a mat-raised-button color="warm" (click)="cancelEdit()">Cancel</a>
     </ng-container>&nbsp;
     <ng-template #elseTemplate> 
-        <button mat-raised-button color="primary">Add</button>
+        <button mat-raised-button color="primary" (click)="addItem()">Add</button>
     </ng-template>
 </form>
 <br>
 <div class="table-wrapper">
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="width: 100%;">
+<table mat-table [dataSource]="dataSource" let i = "index" class="mat-elevation-z8" style="width: 100%;">
 
     <!--- Note that these columns can be defined in any order.
         The actual rendered columns are set as a property on the row definition" -->
